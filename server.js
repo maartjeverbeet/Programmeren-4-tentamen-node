@@ -29,15 +29,15 @@ app.use('/api/v1', routes_v1);
 app.use('/api/v2', routes_v2);
 app.use('/api/v1', auth_routes);
 
-app.use(function (err, req, res, next) {
-    console.dir(err);
+app.use(function(err, req, res, next) {
+    // console.dir(err);
     var error = {
         message: err.message,
         code: err.code,
         name: err.name,
         status: err.status
     }
-    res.status((401).send(error));
+    res.status(401).send(error);
 });
 
 app.use('*', function(req, res){
