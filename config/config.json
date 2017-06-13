@@ -1,7 +1,7 @@
 {
-  "webPort": "3000",
+  "webPort": "1044",
   "dbHost": "146.185.130.82",
   "dbUser": "1044",
-  "dbDatabase": "sakila",
+  "dbDatabase": "1044",
   "secretkey": "tentamen maartje verbeet en joep gruter"
 }
