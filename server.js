@@ -13,7 +13,14 @@ app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json'}));
 
-app.use(expressJWT({ secret: config.secretkey}). unless({path: ['/api/v1/login', '/api/v1/registreren']}));
+app.use(expressJWT({
+    secret: config.secretkey
+}).unless({
+    path: [
+        { url: '/api/v1/login', methods: ['POST'] },
+        { url: '/api/v1/films/:film_id', methodes: ['GET'] }
+    ]
+}));
 
 app.set('port', (process.env.PORT | config.webPort));
 app.set('env', (process.env.ENV | 'development'));
