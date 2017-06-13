@@ -1,6 +1,3 @@
-/**
- * Created by joep on 13-06-17.
- */
 var express = require('express');
 var bodyParser = require('body-parser')
 var logger = require('morgan');
