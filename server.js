@@ -5,7 +5,6 @@ var config = require('./config/config');
 var db = require('./config/db');
 var auth_routes = require('./routes/auth.routes');
 var routes_v1 = require('./routes/routes_api_v1');
-var routes_v2 = require('./routes/routes_api_v2');
 var expressJWT = require('express-jwt');
 
 var app = express();
@@ -33,7 +32,6 @@ app.all('*', function(request, response, next) {
 });
 
 app.use('/api/v1', routes_v1);
-app.use('/api/v2', routes_v2);
 app.use('/api/v1', auth_routes);
 
 app.use(function (err, req, res, next) {
