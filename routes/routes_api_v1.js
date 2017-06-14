@@ -144,6 +144,21 @@ routes.get('/films/:id', function(request, response) {
         });
 });
 
+routes.get('/rentals/:id', function(request, response) {
+    var customerid = request.params.id;
+
+    response.contentType('application/json');
+
+    db.query('SELECT * FROM rental WHERE customer_id=?', [ customerid ],
+        function (error, rows, fields) {
+            if (error) {
+                response.status(400).json(error);
+            } else {
+                response.status(200).json(rows);
+            };
+        });
+});
+
 routes.get('*', function(request, response) {
     response.status(404);
     response.json({
