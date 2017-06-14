@@ -129,6 +129,20 @@ routes.post('/register', function (request, response) {
     });
 });
 
+routes.get('/films/:id', function(request, response) {
+    var filmid = request.params.id;
+
+    response.contentType('application/json');
+
+    db.query('SELECT * FROM film WHERE film_id=?', [ filmid ],
+        function (error, rows, fields) {
+            if (error) {
+                response.status(400).json(error);
+            } else {
+                response.status(200).json(rows);
+            };
+        });
+});
 
 routes.get('*', function(request, response) {
     response.status(404);
@@ -137,5 +151,3 @@ routes.get('*', function(request, response) {
     });
 });
 module.exports = routes;
-
-

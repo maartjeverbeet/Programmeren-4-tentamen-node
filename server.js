@@ -13,7 +13,8 @@ app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json'}));
 
-app.use(expressJWT({ secret: config.secretkey}). unless({path: ['/api/v1/login', '/api/v1/registreren']}));
+// Zorgt ervoor dat je niet ingelogd hoeft zijn voor de gegeven paths
+app.use(expressJWT({ secret: config.secretkey}). unless({path: ['/api/v1/login', '/api/v1/registreren', '/api/v1/films/']}));
 
 app.set('port', (process.env.PORT | config.webPort));
 app.set('env', (process.env.ENV | 'development'));
