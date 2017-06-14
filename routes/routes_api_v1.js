@@ -8,22 +8,21 @@ var path = require('path');
 var app = express();
 var db = require('../config/db');
 
-routes.post('/cities', function(request, response){
-    console.log('test.');
-    var city = request.body;
-    console.log(city.name);
+routes.post('/rentals/:customer_id/:inventory_id', function (request, response) {
+    var rental = request.params;
     var query = {
-        sql: 'INSERT INTO `city` (Name, CountryCode, District, Population) VALUES (?, ?, ?, ?)',
-        values: [ city.Name, city.CountryCode, city.District, city.Population],
+        sql: 'INSERT INTO `rental`(rental_date, customer_id, inventory_id, staff_id) VALUES (?, ?, ?, ?)',
+        values: [new Date(), rental.customer_id, rental.inventory_id, 1],
         timeout: 2000 //2secs
     };
 
-    console.dir(city);
+    console.dir(rental);
     console.log('Onze query: ' + query.sql + query.values);
 
     response.contentType('application/json');
-    db.query(query, function(error, rows, fields) {
-        if (error) {
+    db.query(query, function(error, rows, fields){
+        if(error) {
+            console.log(error);
             response.status(400);
             response.json(error);
         } else {
@@ -33,69 +32,12 @@ routes.post('/cities', function(request, response){
     });
 });
 
-routes.put('/cities/:id', function(request, response){
-    var city = request.city;
-    var ID = request.params.id;
-    var query = {
-        sql: 'UPDATE `city` SET Name=?, CountryCode=?, District=?, Population=? WHERE ID=?',
-        values: [ city.Name, city.CountryCode, city.District, city.Population ],
-        timeout: 2000
-    };
-
-    console.dir(city);
-    console.log('Onze query: ' + query.sql);
-
-    response.contentType('application/json');
-    db.query(query, function(error, rows, fields) {
-        if(error) {
-            response.satus(400);
-            response.json(error);
-        } else {
-            response.satus(200);
-            response.json(rows);
-        };
-    });
-});
-
-routes.delete('/actors/:id', function(require, response) {
-    var ID = require.params.id;
-    var query = {
-        sql: 'DELETE FROM `city` WHERE ID=?',
-        values: [ ID ],
-        timeout: 2000
-    };
-
-    console.log('Onze query: ' + query.sql);
-
-    response.contentType('application/json');
-    db.query(query, function(error, rows, fields){
-        if(error) {
-            response.status(400);
-            response.json(error);
-        } else {
-            response.satus(200);
-            response.json(rows);
-        };
-    });
-});
-
-routes.get('/cities', function (req, res) {
-    res.contentType('application/json')
-    db.query('SELECT * FROM city', function(error, rows, fields) {
-        if (error) {
-            res.status(400).json(error);
-        } else {
-            res.status(200).json(rows);
-        };
-    });
-});
-
-routes.get('/cities/:id', function(request, response) {
-    var cityId = request.params.id;
+routes.get('/films/:film_id', function(request, response) {
+    var film = request.params.film_id;
 
     response.contentType('application/json');
 
-    db.query('SELECT * FROM city WHERE city_ID=?', [ cityId ],
+    db.query('SELECT * FROM film WHERE film_id=?', [ film ],
         function (error, rows, fields) {
             if (error) {
                 response.status(400).json(error);
