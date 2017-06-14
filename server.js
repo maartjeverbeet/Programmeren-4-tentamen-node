@@ -17,7 +17,7 @@ app.use(expressJWT({
 }).unless({
     path: [
         { url: '/api/v1/login', methods: ['POST'] },
-        { url: '/api/v1/films/:film_id', methodes: ['GET'] }
+        { url: '/api/v1/films/:film_id', methods: ['GET'] }
     ]
 }));
 

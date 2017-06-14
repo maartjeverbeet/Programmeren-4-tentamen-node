@@ -32,6 +32,29 @@ routes.post('/rentals/:customer_id/:inventory_id', function (request, response) 
     });
 });
 
+routes.delete('/rentals/:customer_id/:inventory_id', function (request, response) {
+    var rental = request.params;
+    var query = {
+        sql: 'DELETE FROM `rental` WHERE customer_id=? AND inventory_id=?' ,
+        values: [ parseInt(rental.customer_id), parseInt(rental.inventory_id) ],
+        timeout: 2000
+    };
+
+    console.log('Onze query: ' + query.sql);
+
+    response.contentType('application/json');
+    db.query(query, function(error, rows, fields) {
+        if(error) {
+            console.log(error);
+            response.status(400);
+            response.json(error);
+        } else {
+            response.status(200);
+            response.json(rows);
+        };
+    });
+});
+
 routes.get('/films/:film_id', function(request, response) {
     var film = request.params.film_id;
 
@@ -71,20 +94,6 @@ routes.post('/register', function (request, response) {
     });
 });
 
-routes.get('/films/:id', function(request, response) {
-    var filmid = request.params.id;
-
-    response.contentType('application/json');
-
-    db.query('SELECT * FROM film WHERE film_id=?', [ filmid ],
-        function (error, rows, fields) {
-            if (error) {
-                response.status(400).json(error);
-            } else {
-                response.status(200).json(rows);
-            };
-        });
-});
 
 routes.get('/rentals/:id', function(request, response) {
     var customerid = request.params.id;
