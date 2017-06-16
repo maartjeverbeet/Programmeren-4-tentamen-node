@@ -3,10 +3,11 @@
  */
 var express = require('express');
 var routes = express.Router();
-var db = require('../config/db');
 var auth = require('../auth/authentication');
 
 routes.post('/login', function(req, res){
+
+    console.dir(req.body);
 
     var username = req.body.username;
     var password = req.body.password;
@@ -23,12 +24,6 @@ routes.post('/login', function(req, res){
             error: "ongeldige usernaam of password."
         });
     }
-});
-
-routes.get('/hello', function(req, res){
-    res.contentType('application/json');
-    res.status(200);
-    res.json(mijnObject);
 });
 
 module.exports = routes;

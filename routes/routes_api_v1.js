@@ -110,6 +110,21 @@ routes.get('/rentals/:id', function(request, response) {
         });
 });
 
+routes.get('/film', function(request, response) {
+    var film1 = request.params;
+
+    response.contentType('application/json');
+
+    db.query('SELECT * FROM film', [ film1 ],
+        function (error, rows, fields) {
+            if (error) {
+                response.status(400).json(error);
+            } else {
+                response.status(200).json(rows);
+            };
+        });
+});
+
 routes.get('*', function(request, response) {
     response.status(404);
     response.json({

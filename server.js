@@ -1,3 +1,4 @@
+var http = require('http');
 var express = require('express');
 var bodyParser = require('body-parser')
 var logger = require('morgan');
@@ -16,8 +17,9 @@ app.use(expressJWT({
     secret: config.secretkey
 }).unless({
     path: [
-        { url: '/api/v1/login', methods: ['POST'] },
-        { url: '/api/v1/films/:film_id', methods: ['GET'] }
+        { url: '/api/v1/film', methods: ['GET'] },
+        { url: '/api/v1/films/:film_id', methods: ['GET'] },
+        { url: '/api/v1/login', methods: ['POST'] }
     ]
 }));
 
@@ -26,10 +28,10 @@ app.set('env', (process.env.ENV | 'development'));
 
 app.use(logger('dev'));
 
-app.all('*', function(request, response, next) {
-    console.log(request.method + " " + request.url);
-    next();
-});
+//app.all('*', function(request, response, next) {
+  //  console.log(request.method + " " + request.url);
+    //next();
+//});
 
 app.use('/api/v1', routes_v1);
 app.use('/api/v1', auth_routes);
@@ -52,7 +54,7 @@ app.use('*', function(req, res){
     });
 });
 
-app.listen(process.env.PORT || function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log('De server luistert op port ' + app.get('port'));
 });
 
