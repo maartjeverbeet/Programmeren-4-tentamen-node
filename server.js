@@ -52,7 +52,7 @@ app.use('*', function(req, res){
     });
 });
 
-app.listen(app.get('port'), function() {
+app.listen(process.env.PORT || function() {
     console.log('De server luistert op port ' + app.get('port'));
 });
 
