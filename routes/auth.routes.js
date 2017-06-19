@@ -8,11 +8,11 @@ var auth = require('../auth/authentication');
 routes.get('/login', function(request, response){
     var credentials = basic_auth(request);
     var email = credentials.name;
-    var password = credentials.pass;
+    var password_user = credentials.pass;
 
-    if (validator.isEmail(email) && !validator.isEmpty(password)) {
+    if (validator.isEmail(email) && !validator.isEmpty(password_user)) {
         // Load hash from your password DB.
-        db.query('SELECT * FROM customer WHERE email = ?', [email], function (error, results, fields) {
+        db.query('SELECT * FROM customer WHERE email = ? AND password = ?', [email, password_user], function (error, results, fields) {
             if (error) {
                 // Error handling for select db query
                 console.log(error);
