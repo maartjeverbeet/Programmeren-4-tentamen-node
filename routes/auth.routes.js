@@ -12,7 +12,7 @@ routes.get('/login', function(request, response){
 
     if (validator.isEmail(email) && !validator.isEmpty(password_user)) {
         // Load hash from your password DB.
-        db.query('SELECT * FROM customer WHERE email = ? AND password = ?', [email, password_user], function (error, results, fields) {
+        db.query('SELECT * FROM customer WHERE email = ? AND password_user = ?', [email, password_user], function (error, results, fields) {
             if (error) {
                 // Error handling for select db query
                 console.log(error);
