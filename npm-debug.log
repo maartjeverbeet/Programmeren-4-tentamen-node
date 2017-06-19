@@ -1,47 +1,312 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start' ]
+1 verbose cli   'install',
+1 verbose cli   'gulp',
+1 verbose cli   'gulp-mocha',
+1 verbose cli   'gulp-instanbul',
+1 verbose cli   'run-sequence',
+1 verbose cli   'sonarqube-scanner' ]
 2 info using npm@3.10.10
 3 info using node@v6.10.2
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info lifecycle programmeren-4-tentamen@1.0.0~prestart: programmeren-4-tentamen@1.0.0
-6 silly lifecycle programmeren-4-tentamen@1.0.0~prestart: no script for prestart, continuing
-7 info lifecycle programmeren-4-tentamen@1.0.0~start: programmeren-4-tentamen@1.0.0
-8 verbose lifecycle programmeren-4-tentamen@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle programmeren-4-tentamen@1.0.0~start: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Prgrammeren-4-tentamen-node\Programmeren-4-tentamen-node\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\maartje\AppData\Local\Microsoft\WindowsApps;C:\Users\maartje\AppData\Roaming\npm;C:\Program Files\Heroku\bin
-10 verbose lifecycle programmeren-4-tentamen@1.0.0~start: CWD: C:\Prgrammeren-4-tentamen-node\Programmeren-4-tentamen-node
-11 silly lifecycle programmeren-4-tentamen@1.0.0~start: Args: [ '/d /s /c', 'node server.js' ]
-12 silly lifecycle programmeren-4-tentamen@1.0.0~start: Returned: code: 3221225786  signal: null
-13 info lifecycle programmeren-4-tentamen@1.0.0~start: Failed to exec start script
-14 verbose stack Error: programmeren-4-tentamen@1.0.0 start: `node server.js`
-14 verbose stack Exit status 3221225786
-14 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:255:16)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:40:14)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:886:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
-15 verbose pkgid programmeren-4-tentamen@1.0.0
-16 verbose cwd C:\Prgrammeren-4-tentamen-node\Programmeren-4-tentamen-node
-17 error Windows_NT 10.0.14393
-18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
-19 error node v6.10.2
-20 error npm  v3.10.10
-21 error code ELIFECYCLE
-22 error programmeren-4-tentamen@1.0.0 start: `node server.js`
-22 error Exit status 3221225786
-23 error Failed at the programmeren-4-tentamen@1.0.0 start script 'node server.js'.
-23 error Make sure you have the latest version of node.js and npm installed.
-23 error If you do, this is most likely a problem with the programmeren-4-tentamen package,
-23 error not with npm itself.
-23 error Tell the author that this fails on your system:
-23 error     node server.js
-23 error You can get information on how to open an issue for this project with:
-23 error     npm bugs programmeren-4-tentamen
-23 error Or if that isn't available, you can get their info via:
-23 error     npm owner ls programmeren-4-tentamen
-23 error There is likely additional logging output above.
-24 verbose exit [ 1, true ]
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData gulp
+8 silly fetchPackageMetaData gulp-mocha
+9 silly fetchPackageMetaData gulp-instanbul
+10 silly fetchPackageMetaData run-sequence
+11 silly fetchPackageMetaData sonarqube-scanner
+12 silly fetchNamedPackageData gulp
+13 silly mapToRegistry name gulp
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry data Result {
+16 silly mapToRegistry   raw: 'gulp',
+16 silly mapToRegistry   scope: null,
+16 silly mapToRegistry   escapedName: 'gulp',
+16 silly mapToRegistry   name: 'gulp',
+16 silly mapToRegistry   rawSpec: '',
+16 silly mapToRegistry   spec: 'latest',
+16 silly mapToRegistry   type: 'tag' }
+17 silly mapToRegistry uri https://registry.npmjs.org/gulp
+18 silly fetchNamedPackageData gulp-mocha
+19 silly mapToRegistry name gulp-mocha
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry data Result {
+22 silly mapToRegistry   raw: 'gulp-mocha',
+22 silly mapToRegistry   scope: null,
+22 silly mapToRegistry   escapedName: 'gulp-mocha',
+22 silly mapToRegistry   name: 'gulp-mocha',
+22 silly mapToRegistry   rawSpec: '',
+22 silly mapToRegistry   spec: 'latest',
+22 silly mapToRegistry   type: 'tag' }
+23 silly mapToRegistry uri https://registry.npmjs.org/gulp-mocha
+24 silly fetchNamedPackageData gulp-instanbul
+25 silly mapToRegistry name gulp-instanbul
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: 'gulp-instanbul',
+28 silly mapToRegistry   scope: null,
+28 silly mapToRegistry   escapedName: 'gulp-instanbul',
+28 silly mapToRegistry   name: 'gulp-instanbul',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/gulp-instanbul
+30 silly fetchNamedPackageData run-sequence
+31 silly mapToRegistry name run-sequence
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'run-sequence',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   escapedName: 'run-sequence',
+34 silly mapToRegistry   name: 'run-sequence',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/run-sequence
+36 silly fetchNamedPackageData sonarqube-scanner
+37 silly mapToRegistry name sonarqube-scanner
+38 silly mapToRegistry using default registry
+39 silly mapToRegistry registry https://registry.npmjs.org/
+40 silly mapToRegistry data Result {
+40 silly mapToRegistry   raw: 'sonarqube-scanner',
+40 silly mapToRegistry   scope: null,
+40 silly mapToRegistry   escapedName: 'sonarqube-scanner',
+40 silly mapToRegistry   name: 'sonarqube-scanner',
+40 silly mapToRegistry   rawSpec: '',
+40 silly mapToRegistry   spec: 'latest',
+40 silly mapToRegistry   type: 'tag' }
+41 silly mapToRegistry uri https://registry.npmjs.org/sonarqube-scanner
+42 verbose request uri https://registry.npmjs.org/gulp-instanbul
+43 verbose request no auth needed
+44 info attempt registry request try #1 at 23:26:09
+45 verbose request id edadaeda50a86e04
+46 http request GET https://registry.npmjs.org/gulp-instanbul
+47 verbose request uri https://registry.npmjs.org/gulp-mocha
+48 verbose request no auth needed
+49 info attempt registry request try #1 at 23:26:09
+50 verbose etag W/"5901b06a-a2ef"
+51 verbose lastModified Thu, 27 Apr 2017 08:48:42 GMT
+52 http request GET https://registry.npmjs.org/gulp-mocha
+53 verbose request uri https://registry.npmjs.org/gulp
+54 verbose request no auth needed
+55 info attempt registry request try #1 at 23:26:09
+56 verbose etag W/"5936918e-1d4b5"
+57 verbose lastModified Tue, 06 Jun 2017 11:27:10 GMT
+58 http request GET https://registry.npmjs.org/gulp
+59 verbose request uri https://registry.npmjs.org/run-sequence
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 23:26:09
+62 verbose etag W/"59357201-79fd"
+63 verbose lastModified Mon, 05 Jun 2017 15:00:17 GMT
+64 http request GET https://registry.npmjs.org/run-sequence
+65 verbose request uri https://registry.npmjs.org/sonarqube-scanner
+66 verbose request no auth needed
+67 info attempt registry request try #1 at 23:26:09
+68 verbose etag W/"59312d65-436b"
+69 verbose lastModified Fri, 02 Jun 2017 09:18:29 GMT
+70 http request GET https://registry.npmjs.org/sonarqube-scanner
+71 http 304 https://registry.npmjs.org/gulp-mocha
+72 verbose headers { date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+72 verbose headers   via: '1.1 varnish',
+72 verbose headers   'cache-control': 'max-age=300',
+72 verbose headers   etag: 'W/"5901b06a-a2ef"',
+72 verbose headers   age: '0',
+72 verbose headers   connection: 'keep-alive',
+72 verbose headers   'x-served-by': 'cache-ams4451-AMS',
+72 verbose headers   'x-cache': 'HIT',
+72 verbose headers   'x-cache-hits': '1',
+72 verbose headers   'x-timer': 'S1497907571.913948,VS0,VE7',
+72 verbose headers   vary: 'Accept-Encoding' }
+73 silly get cb [ 304,
+73 silly get   { date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+73 silly get     via: '1.1 varnish',
+73 silly get     'cache-control': 'max-age=300',
+73 silly get     etag: 'W/"5901b06a-a2ef"',
+73 silly get     age: '0',
+73 silly get     connection: 'keep-alive',
+73 silly get     'x-served-by': 'cache-ams4451-AMS',
+73 silly get     'x-cache': 'HIT',
+73 silly get     'x-cache-hits': '1',
+73 silly get     'x-timer': 'S1497907571.913948,VS0,VE7',
+73 silly get     vary: 'Accept-Encoding' } ]
+74 verbose etag https://registry.npmjs.org/gulp-mocha from cache
+75 verbose get saving gulp-mocha to C:\Users\maartje\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-mocha\.cache.json
+76 verbose correctMkdir C:\Users\maartje\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+77 http 304 https://registry.npmjs.org/run-sequence
+78 verbose headers { date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+78 verbose headers   via: '1.1 varnish',
+78 verbose headers   'cache-control': 'max-age=300',
+78 verbose headers   etag: 'W/"59357201-79fd"',
+78 verbose headers   age: '112',
+78 verbose headers   connection: 'keep-alive',
+78 verbose headers   'x-served-by': 'cache-ams4447-AMS',
+78 verbose headers   'x-cache': 'HIT',
+78 verbose headers   'x-cache-hits': '2',
+78 verbose headers   'x-timer': 'S1497907571.924422,VS0,VE0',
+78 verbose headers   vary: 'Accept-Encoding' }
+79 silly get cb [ 304,
+79 silly get   { date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+79 silly get     via: '1.1 varnish',
+79 silly get     'cache-control': 'max-age=300',
+79 silly get     etag: 'W/"59357201-79fd"',
+79 silly get     age: '112',
+79 silly get     connection: 'keep-alive',
+79 silly get     'x-served-by': 'cache-ams4447-AMS',
+79 silly get     'x-cache': 'HIT',
+79 silly get     'x-cache-hits': '2',
+79 silly get     'x-timer': 'S1497907571.924422,VS0,VE0',
+79 silly get     vary: 'Accept-Encoding' } ]
+80 verbose etag https://registry.npmjs.org/run-sequence from cache
+81 verbose get saving run-sequence to C:\Users\maartje\AppData\Roaming\npm-cache\registry.npmjs.org\run-sequence\.cache.json
+82 verbose correctMkdir C:\Users\maartje\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+83 http 304 https://registry.npmjs.org/sonarqube-scanner
+84 verbose headers { date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+84 verbose headers   via: '1.1 varnish',
+84 verbose headers   'cache-control': 'max-age=300',
+84 verbose headers   etag: 'W/"59312d65-436b"',
+84 verbose headers   age: '0',
+84 verbose headers   connection: 'keep-alive',
+84 verbose headers   'x-served-by': 'cache-ams4138-AMS',
+84 verbose headers   'x-cache': 'MISS',
+84 verbose headers   'x-cache-hits': '0',
+84 verbose headers   'x-timer': 'S1497907571.947896,VS0,VE7',
+84 verbose headers   vary: 'Accept-Encoding' }
+85 silly get cb [ 304,
+85 silly get   { date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+85 silly get     via: '1.1 varnish',
+85 silly get     'cache-control': 'max-age=300',
+85 silly get     etag: 'W/"59312d65-436b"',
+85 silly get     age: '0',
+85 silly get     connection: 'keep-alive',
+85 silly get     'x-served-by': 'cache-ams4138-AMS',
+85 silly get     'x-cache': 'MISS',
+85 silly get     'x-cache-hits': '0',
+85 silly get     'x-timer': 'S1497907571.947896,VS0,VE7',
+85 silly get     vary: 'Accept-Encoding' } ]
+86 verbose etag https://registry.npmjs.org/sonarqube-scanner from cache
+87 verbose get saving sonarqube-scanner to C:\Users\maartje\AppData\Roaming\npm-cache\registry.npmjs.org\sonarqube-scanner\.cache.json
+88 verbose correctMkdir C:\Users\maartje\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+89 http 200 https://registry.npmjs.org/gulp
+90 verbose headers { server: 'nginx/1.10.1',
+90 verbose headers   'content-type': 'application/json',
+90 verbose headers   'last-modified': 'Thu, 15 Jun 2017 19:06:39 GMT',
+90 verbose headers   etag: 'W/"5942dabf-1d52d"',
+90 verbose headers   'content-encoding': 'gzip',
+90 verbose headers   'cache-control': 'max-age=300',
+90 verbose headers   'content-length': '17821',
+90 verbose headers   'accept-ranges': 'bytes',
+90 verbose headers   date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+90 verbose headers   via: '1.1 varnish',
+90 verbose headers   age: '61',
+90 verbose headers   connection: 'keep-alive',
+90 verbose headers   'x-served-by': 'cache-ams4440-AMS',
+90 verbose headers   'x-cache': 'HIT',
+90 verbose headers   'x-cache-hits': '1',
+90 verbose headers   'x-timer': 'S1497907571.910178,VS0,VE1',
+90 verbose headers   vary: 'Accept-Encoding' }
+91 silly get cb [ 200,
+91 silly get   { server: 'nginx/1.10.1',
+91 silly get     'content-type': 'application/json',
+91 silly get     'last-modified': 'Thu, 15 Jun 2017 19:06:39 GMT',
+91 silly get     etag: 'W/"5942dabf-1d52d"',
+91 silly get     'content-encoding': 'gzip',
+91 silly get     'cache-control': 'max-age=300',
+91 silly get     'content-length': '17821',
+91 silly get     'accept-ranges': 'bytes',
+91 silly get     date: 'Mon, 19 Jun 2017 21:26:10 GMT',
+91 silly get     via: '1.1 varnish',
+91 silly get     age: '61',
+91 silly get     connection: 'keep-alive',
+91 silly get     'x-served-by': 'cache-ams4440-AMS',
+91 silly get     'x-cache': 'HIT',
+91 silly get     'x-cache-hits': '1',
+91 silly get     'x-timer': 'S1497907571.910178,VS0,VE1',
+91 silly get     vary: 'Accept-Encoding' } ]
+92 verbose get saving gulp to C:\Users\maartje\AppData\Roaming\npm-cache\registry.npmjs.org\gulp\.cache.json
+93 verbose correctMkdir C:\Users\maartje\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+94 http 404 https://registry.npmjs.org/gulp-instanbul
+95 verbose headers { 'content-type': 'application/json',
+95 verbose headers   'cache-control': 'max-age=0',
+95 verbose headers   'content-length': '2',
+95 verbose headers   'accept-ranges': 'bytes',
+95 verbose headers   date: 'Mon, 19 Jun 2017 21:26:11 GMT',
+95 verbose headers   via: '1.1 varnish',
+95 verbose headers   age: '0',
+95 verbose headers   connection: 'keep-alive',
+95 verbose headers   'x-served-by': 'cache-ams4141-AMS',
+95 verbose headers   'x-cache': 'MISS',
+95 verbose headers   'x-cache-hits': '0',
+95 verbose headers   'x-timer': 'S1497907571.917386,VS0,VE624',
+95 verbose headers   vary: 'Accept-Encoding' }
+96 silly get cb [ 404,
+96 silly get   { 'content-type': 'application/json',
+96 silly get     'cache-control': 'max-age=0',
+96 silly get     'content-length': '2',
+96 silly get     'accept-ranges': 'bytes',
+96 silly get     date: 'Mon, 19 Jun 2017 21:26:11 GMT',
+96 silly get     via: '1.1 varnish',
+96 silly get     age: '0',
+96 silly get     connection: 'keep-alive',
+96 silly get     'x-served-by': 'cache-ams4141-AMS',
+96 silly get     'x-cache': 'MISS',
+96 silly get     'x-cache-hits': '0',
+96 silly get     'x-timer': 'S1497907571.917386,VS0,VE624',
+96 silly get     vary: 'Accept-Encoding' } ]
+97 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/gulp-instanbul
+97 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+97 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:280:14)
+97 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+97 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+97 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+97 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+97 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+97 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+97 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+97 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+97 silly fetchPackageMetaData  error for gulp-instanbul { Error: Registry returned 404 for GET on https://registry.npmjs.org/gulp-instanbul
+97 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+97 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:280:14)
+97 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+97 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+97 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+97 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+97 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+97 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+97 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+97 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12) pkgid: 'gulp-instanbul', statusCode: 404, code: 'E404' }
+98 silly rollbackFailedOptional Starting
+99 silly rollbackFailedOptional Finishing
+100 silly runTopLevelLifecycles Finishing
+101 silly install printInstalled
+102 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/gulp-instanbul
+102 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+102 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:280:14)
+102 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+102 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+102 verbose stack     at emitTwo (events.js:106:13)
+102 verbose stack     at Request.emit (events.js:191:7)
+102 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+102 verbose stack     at emitOne (events.js:96:13)
+102 verbose stack     at Request.emit (events.js:188:7)
+102 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+103 verbose statusCode 404
+104 verbose pkgid gulp-instanbul
+105 verbose cwd C:\Prgrammeren-4-tentamen-node\Programmeren-4-tentamen-node
+106 error Windows_NT 10.0.14393
+107 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "gulp" "gulp-mocha" "gulp-instanbul" "run-sequence" "sonarqube-scanner"
+108 error node v6.10.2
+109 error npm  v3.10.10
+110 error code E404
+111 error 404 Registry returned 404 for GET on https://registry.npmjs.org/gulp-instanbul
+112 error 404
+113 error 404 'gulp-instanbul' is not in the npm registry.
+114 error 404 You should bug the author to publish it (or use the name yourself!)
+115 error 404 Note that you can also install from a
+116 error 404 tarball, folder, http url, or git url.
+117 verbose exit [ 1, true ]
