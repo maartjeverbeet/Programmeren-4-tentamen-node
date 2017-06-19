@@ -5,7 +5,7 @@ var express = require('express');
 var routes = express.Router();
 var auth = require('../auth/authentication');
 
-routes.get('/login', function(request, response){
+routes.post('/login', function(request, response){
     var credentials = basic_auth(request);
     var email = credentials.name;
     var password_user = credentials.pass;
