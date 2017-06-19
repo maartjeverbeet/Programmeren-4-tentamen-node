@@ -20,12 +20,12 @@ app.use(expressJWT({
         { url: '/api/v1/film', methods: ['GET'] },
         { url: /^\/api\/v1\/films\/.*/, methods: ['GET'] },
         { url: '/api/v1/login', methods: ['POST'] },
-        { url: '/register', methods: ['GET'] }
+        { url: '/register', methods: ['POST'] }
     ]
 }));
 
-app.set('port', (process.env.PORT | config.webPort));
-app.set('env', (process.env.ENV | 'development'));
+app.set('port', (process.env.PORT || config.webPort));
+app.set('env', (process.env.ENV || 'development'));
 
 app.use(logger('dev'));
 
