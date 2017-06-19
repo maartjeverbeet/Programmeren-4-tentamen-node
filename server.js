@@ -20,7 +20,7 @@ app.use(expressJWT({
         { url: '/api/v1/film', methods: ['GET'] },
         { url: /^\/api\/v1\/films\/.*/, methods: ['GET'] },
         { url: '/api/v1/login', methods: ['POST'] },
-        { url: '/register', methods: ['POST'] }
+        { url: '/api/v1/register', methods: ['POST'] }
     ]
 }));
 
