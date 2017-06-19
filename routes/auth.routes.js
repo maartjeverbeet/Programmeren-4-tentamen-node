@@ -4,6 +4,7 @@
 var express = require('express');
 var routes = express.Router();
 var auth = require('../auth/authentication');
+var db = require('../config/db');
 
 routes.post('/login', function(request, response){
     var email = request.body.name;
