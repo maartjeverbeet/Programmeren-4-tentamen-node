@@ -77,8 +77,8 @@ routes.post('/register', function (request, response) {
     var customer = request.body;
 
     var query = {
-        sql: 'INSERT INTO `customer` (first_name, last_name, email) VALUES (?, ?, ?)',
-        values: [ customer.first_name, customer.last_name, customer.email],
+        sql: 'INSERT INTO `customer` (first_name, last_name, email, password) VALUES (?, ?, ?, ?)',
+        values: [ customer.first_name, customer.last_name, customer.email, customer.password],
         timeout: 2000 //2secs
     };
 
