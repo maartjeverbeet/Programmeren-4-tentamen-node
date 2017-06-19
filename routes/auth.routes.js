@@ -7,7 +7,7 @@ var auth = require('../auth/authentication');
 var db = require('../config/db');
 
 routes.post('/login', function(request, response){
-    var email = request.body.name;
+    var email = request.body.username;
     var password_user = request.body.password_user;
 
     db.query('SELECT * FROM customer WHERE email = ? AND password_user = ?', [email, password_user], function (error, results, fields) {
