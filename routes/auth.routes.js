@@ -19,6 +19,8 @@ routes.post('/login', function(request, response){
                 'error': 'Something went wrong when querying the database, check stdout'
             })
         } else {
+            console.log("Results: "+ email + " " + password_user);
+            console.log("Results: "+ results);
             if (results.length > 0) {
                 var token = auth.encodeToken(email);
                 response.status(200);
