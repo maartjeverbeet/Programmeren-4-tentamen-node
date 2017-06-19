@@ -45,7 +45,7 @@ app.use(function (err, req, res, next) {
         name: err.name,
         status: err.status
     }
-    res.status((401).send(error));
+    res.status(401).send(error);
 });
 
 app.use('*', function(req, res){
