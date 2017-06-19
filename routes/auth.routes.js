@@ -20,7 +20,7 @@ routes.post('/login', function(request, response){
             })
         } else {
             if (results.length > 0) {
-                var token = auth.encodeToken(username);
+                var token = auth.encodeToken(email);
                 response.status(200);
                 response.json({
                     "token": token,
