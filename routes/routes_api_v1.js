@@ -120,7 +120,7 @@ routes.get('/film', function(request, response) {
             if (error) {
                 response.status(400).json(error);
             } else {
-                response.status(200).json(rows);
+                response.status(200).json({"result": rows});
             };
         });
 });
