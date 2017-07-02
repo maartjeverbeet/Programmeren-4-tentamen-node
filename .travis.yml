@@ -13,3 +13,19 @@ after_success:
   - npm run sonar
 script: 
   - npm test
+
+dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "testtentamen:master"
+    token:
+      secure: "4b819e3014f7a2e2b2f0df793aeeb9f2dd4d21c7"
+jdk:
+  - oraclejdk8
+script:
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'

@@ -95,6 +95,8 @@ routes.post('/register', function (request, response) {
 });
 
 
+
+
 routes.get('/rentals/:id', function(request, response) {
     var customerid = request.params.id;
 
