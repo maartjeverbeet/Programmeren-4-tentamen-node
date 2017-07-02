@@ -19,9 +19,9 @@ sudo: required
 
 addons:
   sonarcloud:
-    organization: "testtentamen:master"
+    organization: testtentamen:master
     token:
-      secure: "4b819e3014f7a2e2b2f0df793aeeb9f2dd4d21c7"
+      secure: 4b819e3014f7a2e2b2f0df793aeeb9f2dd4d21c7
 jdk:
   - oraclejdk8
 script:
